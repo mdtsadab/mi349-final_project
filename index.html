@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Towsif's Portfolio</title>
+</head>
+<body>
+<div class="title-page">
+    <div class="title-content">
+        <h1>Towsif's Portfolio</h1>
+        <p>Showcasing my projects and experience</p>
+        <p>EAST LANSING, MI | SADABMD@MSU.EDU | (586) 365-8925</p>
+    
+    </div>
+</div>
+      
+</div>
+<nav>
+    <ul>
+        <li><a href="resume.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+         <li><a href="contact.html">Contact</a></li>
+     </ul>
+</nav>
+	
+	<section id="objective" class="full-height">
+		<h2>About Me</h2>
+		<p>As an aspiring Computer Science professional, I am driven by a passion for innovative problem-solving and a commitment to continuous learning. With a solid foundation in software development, web design, and graphic development, I have honed my skills through hands-on projects, such as creating a personalized chatbot that adapts and learns from user interactions. My proficiency in Python is evident in projects like Towsif's Calculator, a graphical application demonstrating my ability to create user-friendly interfaces for complex functionalities. Additionally, my involvement in collaborative endeavors, such as the StudyPal project at SpartaHack 8, showcases my ability to work seamlessly within a team, employing advanced algorithms and integrating third-party APIs to deliver successful outcomes. Beyond technical expertise, I bring strong interpersonal skills and a positive attitude, as demonstrated during my tenure as a cashier at Momo Cha in Downtown Detroit. With a Bachelor's degree in Computer Science from Michigan State University, I am eager to contribute my skills to a SWE or Web Design internship role in Spring 2023-2024, and the Summer 2024.</p>
+	</section>
+
+    <script>
+        let lastScroll = 0;
+    
+        window.addEventListener('scroll', () => {
+    
+            let currentScroll = window.pageYOffset;
+    
+            if(currentScroll > lastScroll) {
+                document.body.classList.add("scrolling");
+            } else {
+                document.body.classList.remove("scrolling");  
+            }
+    
+            lastScroll = currentScroll;
+    
+        });
+    
+    </script>
+
+    <div id="education" class="title-page">
+        <div class="title-content">
+            <section id="education">
+            <h1>Education</h1>
+
+            <h3>Michigan State University – East Lansing, MI</h3>
+            <p><em>Bachelor of Science, Computer Science, Sophomore</em></p>
+            <p><em>Honors College</em></p>
+            <p><em>Academic Scholars Program (ASP)</em> – <em>Member</em></p>
+            <p><img alt="msu" src="michstate.png"/></p>
+            </section>
+            
+        
+        </div>
+    </div>
+	
+	
+	
+	<section id="experience" class="full-height about-me-background">
+		<h2>Experience</h2>
+		
+		<h3>Chatbot – Personal python project</h3>
+		<p>Sept 2023</p>
+		<ul>
+			<li>Developed and implemented a personalized chatbot utilizing Python and JSON for a personal project.</li>
+			<li>Designed a dynamic knowledge base system that allowed the chatbot to continuously expand its understanding.</li>
+		</ul>
+		
+		<h3>Towsif’s Calculator– Personal python project</h3> 
+		<p>April 2023</p>
+		<ul>
+			<li>Developed a graphical calculator using Tkinter and Python.</li>
+			<li>Created a user-friendly interface to perform basic arithmetic operations.</li>
+		</ul>
+		
+		<h3>Weather Web App– Personal python project</h3>
+		<p>March 2023</p>
+		<ul>
+			<li>Developed a web application using Flask and OpenWeatherMap API.</li>
+			<li>Fetches and displays weather data for user-specified cities.</li>
+		</ul>
+		
+		<h3>StudyPal – SpartaHack 8</h3>
+		<p>January 2023</p>
+		<ul>
+			<li>Collaborated to build a web app to connect MSU students.</li>
+			<li>Integrated third-party APIs like Twilio.</li>
+		</ul>
+		
+	</section>
+
+
+    <section id="involvement-skills" class="full-height">
+        <div class="column left">
+            <h2>Involvement</h2>
+            <ul>
+                <li>Spartan Hackers</li>
+                <li>MSU AI Club</li>
+                <li>Muslim Student Association</li>
+                <li>Varsity Soccer (CB/CAM)</li>
+                <li>Spartahack</li>
+            </ul>
+        </div>
+        <div class="column right">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML, CSS, JS – Proficient</li>
+                <li>Microsoft Office – Proficient</li>
+                <li>Project management – Proficient</li>
+                <li>API – Proficient</li>
+                <li>Web application – Proficient</li>
+                <li>Python – Proficient</li>
+            </ul>
+        </div>
+    </section>
+
+    
+	
+	
+    <script>
+        let lastScroll = 0;
+    
+        window.addEventListener('scroll', () => {
+        
+          let currentScroll = window.pageYOffset;
+    
+          if(currentScroll > lastScroll) {
+            document.body.classList.add("scrolling");
+          } else {
+            document.body.classList.remove("scrolling");  
+          }
+    
+          lastScroll = currentScroll;
+    
+        });
+    
+      </script>
+	
+</body>
+</html>

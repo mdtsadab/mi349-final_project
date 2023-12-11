@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact - Towsif's Portfolio</title>
+</head>
+<body>
+    <div class="full-height title-background">
+        <div class="title-content">
+            <h1>Towsif's Portfolio</h1>
+            <p>Showcasing my projects and experience</p>
+            <p>EAST LANSING, MI | SADABMD@MSU.EDU | (586) 365-8925</p>
+
+            <form id="contactForm">
+                <h2>Contact Me</h2>
+                
+                <label>Name:
+                    <input type="text" name="name">
+                </label>
+                <label>Email address:
+                    <input type="text" name="email">
+                </label>
+                <label>Reason for contact:
+                    <select id="reason" name="reason" required>
+                        <option value="" disabled selected>Select a reason</option>
+                        <option value="saying_hi">Saying Hi</option>
+                        <option value="looking_for_contractor">Looking for a Contractor</option>
+                        <option value="interested_in_interview">Interested in an Interview</option>
+                    </select>
+                </label>
+                <label>Additional Comments:
+                    <input type="text" name="comments">
+                </label>
+                <button type="button" onclick="submitForm()">Submit</button>
+            </form>
+        </div>
+    </div>
+          
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <script>
+        function submitForm() {
+            const form = document.getElementById('contactForm');
+            const formData = new FormData(form);
+
+            fetch('http://localhost:3000/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(Object.fromEntries(formData)),
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+                // Handle success or error
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>

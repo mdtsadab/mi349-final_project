@@ -1,0 +1,102 @@
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+.title-page {
+    background-color: #0E390E;
+    color: white;  
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+.title-content {
+    margin: auto;  
+    text-align: center; 
+  }
+
+/* Navigation */
+nav {
+    background: #fff; 
+    width: 100%;
+    position: fixed;
+    top: -60px; /* hide offscreen first */
+    transition: top 0.3s; /* smooth scroll transition */
+  }
+  
+nav.visible {
+    top: 0;
+  }
+
+  
+/* Scroll Handler */
+window.onscroll = function() {
+    if (window.pageYOffset > 100) {
+      document.querySelector("nav").classList.add('visible');
+    } else {
+      document.querySelector("nav").classList.remove('visible');
+    }
+  }
+nav {
+    opacity: 0;
+    transition: opacity 0.3s; 
+  }
+  
+body.scrolling nav {
+    opacity: 1;  
+  }
+
+/* Add this style for the full-height section */
+.full-height {
+    height: 100vh; /* 100% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f0f0f0; /* Gray background color */
+}
+
+/* Style for the About Me text */
+#objective p {
+    line-height: 2; /* Double spacing */
+    margin: 20px 0; /* Add some margin for better spacing */
+    font-size: 16px; /* Adjust the font size as needed */
+}
+  
+/* Sections */
+  
+section {
+    padding: 50px 20px;
+  }
+  
+h2 {
+    color: #0E390E;  
+  }
+  
+header {
+    background-color: #0E390E;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+section {
+    padding: 20px;  
+  }
+  
+  
+h1 {
+    margin: 0;
+  }
+  
+ul {
+    list-style: none;  
+    padding-left: 0;
+  }
+  
+li {
+    margin-bottom: 10px;
+  }
